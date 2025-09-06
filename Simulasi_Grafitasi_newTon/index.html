@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulasi Gravitasi Newton</title>
+</head>
+<body>
+  <h2>Simulasi Gravitasi Newton</h2>
+  <p>Buka <b>console</b> untuk lihat hasil perhitungannya (Ctrl + Shift + I).</p>
+
+  <script>
+    // Konstanta gravitasi universal
+    const G = 6.674e-11; // N·m²/kg²
+
+    // Data benda (massa dalam kg, jarak dalam meter)
+    const m1 = 5.97e24; // Massa bumi (kg)
+    const m2 = 70;      // Massa manusia (kg)
+    const r = 6.371e6;  // Jarak (radius bumi, m)
+
+    // Rumus gaya gravitasi: F = G * m1 * m2 / r²
+    const F = G * m1 * m2 / (r * r);
+
+    console.log("=== SIMULASI GRAVITASI NEWTON ===");
+    console.log("Massa Bumi     :", m1, "kg");
+    console.log("Massa Manusia  :", m2, "kg");
+    console.log("Jarak (m)      :", r, "meter");
+    console.log("--------------------------------");
+    console.log("Gaya Gravitasi :", F, "Newton");
+
+    // Interpretasi sederhana
+    if (F > 0) {
+      console.log("Artinya: Bumi menarik manusia ke bawah dengan gaya sebesar", F.toFixed(2), "N");
+    }
+  </script>
+</body>
+</html>
